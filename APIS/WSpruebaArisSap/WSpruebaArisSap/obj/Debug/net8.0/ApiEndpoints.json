@@ -1,0 +1,453 @@
+[
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.ConsumirEncasetamientoController",
+    "Method": "GetUpdateOrdenInversion",
+    "RelativePath": "api/ConsumirEncasetamientoController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BUDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BLDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_CREA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.CrearOrdenesFabricacionController",
+    "Method": "GetUpdateOrdenInversion",
+    "RelativePath": "api/CrearOrdenesFabricacionController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MATNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WERKS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AUFART",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GAMNG",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "START_DATE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "END_DATE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DISPO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FEVOR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "INSMK",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LGORT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CHARG",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.CreateOrdenInversionController",
+    "Method": "GetCreateOrdenInversion",
+    "RelativePath": "api/CreateOrdenInversionController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CO_AREA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COMP_CODE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ORDER_TYPE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ORDER",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FUNC_AREA_LONG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PROFIT_CTR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "REQU_COMP_CODE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "INVEST_PROFILE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CURRENCY",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OBJECTCLASS",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.NotificacionConsumoaAlimentoOFController",
+    "Method": "GetCreateOrdenInversion",
+    "RelativePath": "api/NotificacionConsumoaAlimentoOFController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BUDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BLDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AUFNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_CREA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.NotificacionConsumoHuevosOFController",
+    "Method": "GetCreateOrdenInversion",
+    "RelativePath": "api/NotificacionConsumoHuevosOFController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BUDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AUFNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "YIELD",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_CREA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.ObtenerOrdenesCompraController",
+    "Method": "GetObtenerOrdenesCompra",
+    "RelativePath": "api/ObtenerOrdenesCompraController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FEC_CREA_INICIO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FEC_CREA_FIN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TIPO_DOCU",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SOCIEDAD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NRO_PEDIDO",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.ObtenerPedidoVentaController",
+    "Method": "GetObtenerPedidoVenta",
+    "RelativePath": "api/ObtenerPedidoVentaController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FEC_CREA_INICIO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FEC_CREA_FIN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TIPO_DOCU",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SOCIEDAD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NRO_PEDIDO",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.RegistrarEncasetamientoController",
+    "Method": "GetObtenerOrdenesCompra",
+    "RelativePath": "api/RegistrarEncasetamientoController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "E_PEDIDO",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.UpdateOrdenesProduccionController",
+    "Method": "GetCreateOrdenInversion",
+    "RelativePath": "api/UpdateOrdenesProduccionController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "I_ORDERID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_LIB",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_CTEC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_REAP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_BLOQ",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_DESBLOQ",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_CERR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_BORR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_ANUL_BORR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_LOTE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_FECH_CIERRE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.UpdateOrdenInversionController",
+    "Method": "GetUpdateOrdenInversion",
+    "RelativePath": "api/UpdateOrdenInversionController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "I_ORDERID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_FEC_CTEC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_CTEC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_ANUL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_CERR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_REAP",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WSpruebaArisSap.WeatherForecast, WSpruebaArisSap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

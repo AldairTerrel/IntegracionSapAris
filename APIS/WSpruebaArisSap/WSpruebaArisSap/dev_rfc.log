@@ -1,0 +1,434 @@
+
+**** Log file opened at 2025-04-21 00:52:46.928002 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 49264
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::5cd3:6ccf:fab0:e9a7
+Global trace level        : 0
+
+2025-04-21 00:52:46.915744 [49884] >> Info entry
+	Did not find config file D:\APIS\WSpruebaArisSap\WSpruebaArisSap\sapnwrfc.ini.
+
+**** Log file opened at 2025-04-22 20:21:27.157816 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 21956
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::5cd3:6ccf:fab0:e9a7
+Global trace level        : 0
+
+2025-04-22 20:21:27.130771 [35884] >> Error entry
+	[Handle: 1408809475616	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Tue Apr 22 20:21:27 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+2025-04-22 20:23:26.313998 [32792] >> Error entry
+	[Handle: 1408764170464	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Tue Apr 22 20:23:26 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-23 14:36:28.333286 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 21392
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-23 14:36:28.312363 [32776] >> Error entry
+	[Handle: 2166863184432	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Wed Apr 23 14:36:28 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-24 09:23:58.868158 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 68016
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::5cd3:6ccf:fab0:e9a7
+Global trace level        : 0
+
+2025-04-24 09:23:58.847322 [51752] >> Error entry
+	[Handle: 1986482739744	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr 24 09:23:58 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-24 10:46:45.234650 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 64560
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::5cd3:6ccf:fab0:e9a7
+Global trace level        : 0
+
+2025-04-24 10:46:45.216512 [39524] >> Error entry
+	[Handle: 3017267811200	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr 24 10:46:45 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-24 15:02:33.315484 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 33588
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-24 15:02:33.292919 [79584] >> Error entry
+	[Handle: 1934932508928	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr 24 15:02:33 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-24 16:20:12.833463 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 31912
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-24 16:20:12.812281 [37092] >> Error entry
+	[Handle: 2362297543520	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr 24 16:20:12 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-24 17:27:14.304089 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 69004
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-24 17:27:14.296381 [90716] >> Error entry
+	[Handle: 2693378613952	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr 24 17:27:14 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-25 11:28:39.870887 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 33504
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::38fa:723e:8a85:173e
+Global trace level        : 0
+
+2025-04-25 11:28:39.850402 [33424] >> Error entry
+	[Handle: 1664352360848	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Fri Apr 25 11:28:39 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-25 13:16:04.688522 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 29784
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::8b0f:a1b0:262a:c268
+Global trace level        : 0
+
+2025-04-25 13:16:04.673409 [24144] >> Error entry
+	[Handle: 2963598451328	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Fri Apr 25 13:16:04 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-25 13:47:38.664251 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 26244
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::8b0f:a1b0:262a:c268
+Global trace level        : 0
+
+2025-04-25 13:47:38.658841 [29580] >> Error entry
+	[Handle: 1694433315584	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Fri Apr 25 13:47:38 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-28 16:50:54.980249 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 17028
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::38fa:723e:8a85:173e
+Global trace level        : 0
+
+2025-04-28 16:50:54.848923 [21076] >> Error entry
+	[Handle: 2480798226640	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Mon Apr 28 16:50:54 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+

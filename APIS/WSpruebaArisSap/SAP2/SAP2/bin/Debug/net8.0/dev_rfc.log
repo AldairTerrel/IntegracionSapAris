@@ -1,0 +1,1527 @@
+
+**** Log file opened at 2025-03-26 20:10:44.300000 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 44000
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:10:44.282021 [43744] >> Info entry
+	Did not find config file C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0\sapnwrfc.ini.
+
+**** Log file opened at 2025-03-26 20:17:16.416028 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 45872
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:17:16.398267 [47464] >> Error entry
+	[Handle: 2607086182064	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'MY_SERVER_HOST' unknown
+TIME        Wed Mar 26 20:17:16 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     3
+
+
+**** Log file opened at 2025-03-26 20:27:10.062408 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 15220
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:27:10.055708 [37756] >> Error entry
+	[Handle: 1533374403792	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3301' not reached
+TIME        Wed Mar 26 20:27:10 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:28:56.405443 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 02404
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:28:56.400445 [04040] >> Error entry
+	[Handle: 1964987046800	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:28:56 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:29:37.202092 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 36220
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:29:37.196889 [40332] >> Error entry
+	[Handle: 1672929535008	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3301' not reached
+TIME        Wed Mar 26 20:29:37 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:30:34.434208 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 15616
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:30:34.430177 [35404] >> Error entry
+	[Handle: 2130344588240	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:30:34 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:32:27.442485 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 45352
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:32:27.438277 [11064] >> Error entry
+	[Handle: 2970010762688	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '54.157.225.223:3301' not reached
+TIME        Wed Mar 26 20:32:27 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:33:04.518994 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 43904
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:33:04.514387 [29036] >> Error entry
+	[Handle: 2078770501456	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:3301' unknown
+TIME        Wed Mar 26 20:33:04 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:35:00.018282 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 18948
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:35:00.010131 [09004] >> Error entry
+	[Handle: 2461435327600	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3301' not reached
+TIME        Wed Mar 26 20:35:00 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:37:01.446733 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 22448
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:37:01.444175 [32760] >> Error entry
+	[Handle: 2211948188176	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:3200' unknown
+TIME        Wed Mar 26 20:37:01 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:38:27.510787 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 44716
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:38:27.508069 [47936] >> Error entry
+	[Handle: 2132491115840	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:38:27 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:39:09.728169 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 33000
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:39:09.724094 [29816] >> Error entry
+	[Handle: 1599881819040	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:39:09 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:41:33.962710 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 31188
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:41:33.959377 [30560] >> Error entry
+	[Handle: 1340122500528	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:41:33 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:43:13.779781 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 33828
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:43:13.775312 [36716] >> Error entry
+	[Handle: 2128247959664	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname '54.157.225.223:44305' unknown
+TIME        Wed Mar 26 20:43:13 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:46:21.351789 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 09800
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:46:21.347790 [26652] >> Error entry
+	[Handle: 2480435232896	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '54.157.225.223:3301' not reached
+TIME        Wed Mar 26 20:46:21 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:47:58.781501 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 28872
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:47:58.776105 [07620] >> Error entry
+	[Handle: 2585611243376	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305/sap/bc/gui/sap/its/webgui'
+            unknown
+TIME        Wed Mar 26 20:47:58 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:48:28.811869 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 39316
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:48:28.808081 [20288] >> Error entry
+	[Handle: 1939217790944	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 20:48:28 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 20:49:03.785132 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 21952
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:49:03.777763 [08592] >> Error entry
+	[Handle: 2115311445280	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3301' not reached
+TIME        Wed Mar 26 20:49:03 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:51:23.700934 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 45284
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:51:23.681632 [27456] >> Error entry
+	[Handle: 2302140511328	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3300' not reached
+TIME        Wed Mar 26 20:51:23 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 20:53:10.791061 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 44428
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 20:53:10.771392 [11496] >> Error entry
+	[Handle: 1707287649568	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3300' not reached
+TIME        Wed Mar 26 20:53:10 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:32:33.440822 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 03708
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:32:33.434747 [41052] >> Error entry
+	[Handle: 2385860651104	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3300' not reached
+TIME        Wed Mar 26 21:32:33 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:34:13.171637 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 25368
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:34:13.154672 [46152] >> Error entry
+	[Handle: 2168960468960	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3300' not reached
+TIME        Wed Mar 26 21:34:13 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:36:00.413388 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 40264
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:36:00.408597 [18192] >> Error entry
+	[Handle: 2592019073376	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 21:36:00 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 21:36:05.759567 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 40936
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:36:05.754702 [20800] >> Error entry
+	[Handle: 1670776201280	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname 'fiori.talsa.com.pe:44305' unknown
+TIME        Wed Mar 26 21:36:05 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 21:40:46.278903 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 11716
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:40:46.273346 [37964] >> Error entry
+	[Handle: 1940566415216	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3300' not reached
+TIME        Wed Mar 26 21:40:46 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:43:59.422254 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 28072
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:43:59.417060 [26176] >> Error entry
+	[Handle: 2162523389360	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:44350' not reached
+TIME        Wed Mar 26 21:43:59 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:44350
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:44:40.999100 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 41820
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:44:40.995316 [28108] >> Error entry
+	[Handle: 1662159787136	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:44:40 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53094
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:47:19.905368 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 23776
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:47:19.900308 [06460] >> Error entry
+	[Handle: 2611346421952	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner 'fiori.talsa.com.pe:3305' not reached
+TIME        Wed Mar 26 21:47:19 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 54.157.225.223:3305
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:47:57.500101 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 28368
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:47:57.493509 [12028] >> Error entry
+	[Handle: 2740195468560	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:47:57 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53138
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:48:02.622912 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 21144
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:48:02.617415 [07000] >> Error entry
+	[Handle: 2538331705344	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:48:02 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53143
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:50:28.762732 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 00984
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:50:28.744778 [26008] >> Error entry
+	[Handle: 3223379346304	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:50:28 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53195
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:50:50.771013 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 04204
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:50:50.748718 [32072] >> Error entry
+	[Handle: 2383712950448	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:50:50 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53202
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:51:44.997763 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 23100
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:51:44.969652 [35392] >> Error entry
+	[Handle: 1608471528192	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner 'fiori.talsa.com.pe:44305' broken
+TIME        Wed Mar 26 21:51:44 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53207
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 21:52:25.597326 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 24236
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:52:25.592751 [31352] >> Error entry
+	[Handle: 2192586911968	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       hostname '54.157.225.223:44305' unknown
+TIME        Wed Mar 26 21:52:25 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -2
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxhl.cpp
+LINE        198
+DETAIL      NiHLGetNodeAddr: hostname cached as unknown
+COUNTER     5
+
+
+**** Log file opened at 2025-03-26 21:55:55.293602 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 18912
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 21:55:55.289363 [23536] >> Error entry
+	[Handle: 2682213113296	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner '54.157.225.223:44305' broken
+TIME        Wed Mar 26 21:55:55 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53360
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 22:04:15.802122 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 36128
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 22:04:15.796645 [14692] >> Error entry
+	[Handle: 1726616505664	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner '54.157.225.223:44305' broken
+TIME        Wed Mar 26 22:04:15 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53705
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-26 22:04:37.695600 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 37820
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-26 22:04:37.690717 [41516] >> Error entry
+	[Handle: 2473940970112	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       connection to partner '54.157.225.223:44305' broken
+TIME        Wed Mar 26 22:04:37 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      D:/depot/bas/753_REL/src/krn/si/gw/gwxx.c
+LINE        1179
+DETAIL      NiIRead: P=54.157.225.223:44305; L=192.168.137.20:53714
+SYSTEM CALL GwRead
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     2
+
+
+**** Log file opened at 2025-03-28 16:05:49.294651 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : C:\Users\gean.segura\source\repos\CleanArquitecture\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 04448
+User                      : gean.segura
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP136
+IP address                : 192.168.137.20
+IPv6 address              : fe80::1680:1a99:effb:f7b7
+Global trace level        : 0
+
+2025-03-28 16:05:49.275683 [43660] >> Error entry
+	[Handle: 2156081032752	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3300' not reached
+TIME        Fri Mar 28 16:05:49 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-02 18:36:52.776244 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 02820
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-02 18:36:52.767925 [10324] >> Error entry
+	[Handle: 1803892616432	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Wed Apr  2 18:36:52 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-02 18:51:02.098885 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 22872
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-02 18:51:02.093367 [19704] >> Error entry
+	[Handle: 2495383407152	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Wed Apr  2 18:51:02 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+
+**** Log file opened at 2025-04-03 01:10:07.585329 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 11708
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-03 01:10:07.581032 [11196] >> Error entry
+	[Handle: 2357943352048	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr  3 01:10:07 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+
+**** Log file opened at 2025-04-03 01:17:35.459047 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 20932
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-03 01:17:35.456721 [27340] >> Error entry
+	[Handle: 2448565882368	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Thu Apr  3 01:17:35 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+
+**** Log file opened at 2025-04-04 23:51:32.859288 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 32576
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::b08a:a436:817f:dec6
+Global trace level        : 0
+
+2025-04-04 23:51:32.847085 [13692] >> Error entry
+	[Handle: 2192586437936	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Fri Apr  4 23:51:32 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+
+**** Log file opened at 2025-04-07 16:43:46.706987 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\ArisSap\PruebaWSARIS\SAP2\SAP2\bin\Debug\net8.0
+Program                   : SAP2
+Process ID                : 01304
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.174
+IPv6 address              : fe80::5cd3:6ccf:fab0:e9a7
+Global trace level        : 0
+
+2025-04-07 16:43:46.691297 [25312] >> Error entry
+	[Handle: 2190439758400	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Mon Apr  7 16:43:46 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
