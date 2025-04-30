@@ -36,7 +36,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "EN"}
+                {"lang", "ES"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);

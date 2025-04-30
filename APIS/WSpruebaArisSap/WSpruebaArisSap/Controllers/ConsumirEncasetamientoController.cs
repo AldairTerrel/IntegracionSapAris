@@ -17,6 +17,15 @@ namespace WSpruebaArisSap.Controllers
     [Route("api/")]
     public class ConsumirEncasetamientoController : ControllerBase
     {
+        public class NotConsOiItem
+        {
+            public string MATNR { get; set; }
+            public string WERKS { get; set; }
+            public string LGORT { get; set; }
+            public string CHARG { get; set; }
+            public string REFMG { get; set; }
+        }
+
         private readonly IConfiguration _configuration;
 
         public ConsumirEncasetamientoController(IConfiguration configuration)
@@ -25,7 +34,8 @@ namespace WSpruebaArisSap.Controllers
         }
 
         [HttpGet("ConsumirEncasetamientoController")]
-        public async Task<IActionResult> GetUpdateOrdenInversion(string BUDAT, string BLDAT, string UARIS_CREA, string UARIS_MOD)
+        public async Task<IActionResult> GetUpdateOrdenInversion(string BUDAT ="", string BLDAT = "", string UARIS_CREA = "", string UARIS_MOD = "", 
+            string MATNR = "", string WERKS = "", string LGORT = "", string CHARG = "", string REFMG = "", string AUFNR = "", string I_MOV_TYPE = "")
         {
             var settings = new Dictionary<string, string>
             {
@@ -34,7 +44,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "EN"}
+                {"lang", "ES"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);
@@ -45,14 +55,49 @@ namespace WSpruebaArisSap.Controllers
                 try
                 {
 
+                    BUDAT = string.IsNullOrEmpty(BUDAT) ? "" : BUDAT;
+                    BLDAT = string.IsNullOrEmpty(BLDAT) ? "" : BLDAT;
+                    UARIS_CREA = string.IsNullOrEmpty(UARIS_CREA) ? "" : UARIS_CREA;
+                    UARIS_MOD = string.IsNullOrEmpty(UARIS_MOD) ? "" : UARIS_MOD;
+                    MATNR = string.IsNullOrEmpty(MATNR) ? "" : MATNR;
+                    WERKS = string.IsNullOrEmpty(WERKS) ? "" : WERKS;
+                    LGORT = string.IsNullOrEmpty(LGORT) ? "" : LGORT;
+                    CHARG = string.IsNullOrEmpty(CHARG) ? "" : CHARG;
+                    REFMG = string.IsNullOrEmpty(REFMG) ? "" : REFMG;
+                    AUFNR = string.IsNullOrEmpty(BUDAT) ? "" : BUDAT;
+                    I_MOV_TYPE = string.IsNullOrEmpty(I_MOV_TYPE) ? "" : I_MOV_TYPE;
 
+                    var items = new List<NotConsOiItem>
+{
+                            new NotConsOiItem
+                            {
+                                MATNR = MATNR,
+                                WERKS = WERKS,
+                                LGORT = LGORT,
+                                CHARG = CHARG,
+                                REFMG = REFMG
+                            }
+                            // Si quieres agregar más filas, simplemente añade más objetos aquí
+                    };
 
                     var result = await context.CallFunction("ZPP_FM_NOTIF_CONS_ORDEN_INV",
                         Input: f => f.SetStructure("ES_CAB_NOT_CONS_OI", s =>s
                         .SetField("BUDAT", DateTime.ParseExact(BUDAT, "dd.MM.yyyy", null))
-                         .SetField("BLDAT", DateTime.ParseExact(BLDAT, "dd.MM.yyyy", null))
-                          .SetField("UARIS_CREA", UARIS_CREA)
-                           .SetField("UARIS_MOD", UARIS_MOD)),
+                        .SetField("BLDAT", DateTime.ParseExact(BLDAT, "dd.MM.yyyy", null))
+                        .SetField("UARIS_CREA", UARIS_CREA)
+                        .SetField("UARIS_MOD", UARIS_MOD))
+                         
+                        .SetTable("IT_NOT_CONS_OI", items,
+                                         (structure, items) => structure
+                                                 .SetField("MATNR", items.MATNR)
+                                                 .SetField("WERKS", items.WERKS)
+                                                 .SetField("LGORT", items.LGORT)
+                                                 .SetField("CHARG", items.CHARG)
+                                                 .SetField("REFMG", items.REFMG)
+                        )
+                        
+                       .SetField("I_MOV_TYPE", I_MOV_TYPE),
+                                       
 
 
 

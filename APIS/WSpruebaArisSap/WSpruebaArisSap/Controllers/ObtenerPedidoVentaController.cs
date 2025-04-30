@@ -25,7 +25,7 @@ namespace WSpruebaArisSap.Controllers
         }
 
         [HttpGet("ObtenerPedidoVentaController")]
-        public async Task<IActionResult> GetObtenerPedidoVenta(string FEC_CREA_INICIO, string FEC_CREA_FIN, string TIPO_DOCU, string SOCIEDAD, string NRO_PEDIDO = "")
+        public async Task<IActionResult> GetObtenerPedidoVenta(string FEC_CREA_INICIO = "", string FEC_CREA_FIN = "", string NRO_PEDIDO = "",string SOCIEDAD = "")
         {
             var settings = new Dictionary<string, string>
             {
@@ -34,7 +34,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "EN"}
+                {"lang", "ES"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);
@@ -51,7 +51,7 @@ namespace WSpruebaArisSap.Controllers
                         Input: f => f
                                         .SetField("FEC_CREA_INICIO", DateTime.ParseExact(FEC_CREA_INICIO, "dd.MM.yyyy", null))
                                         .SetField("FEC_CREA_FIN", DateTime.ParseExact(FEC_CREA_FIN, "dd.MM.yyyy", null))
-                                        .SetField("TIPO_DOCU", TIPO_DOCU)
+                                    
                                         .SetField("NRO_PEDIDO", NRO_PEDIDO)
                                         .SetField("SOCIEDAD", SOCIEDAD),
 
@@ -61,14 +61,14 @@ namespace WSpruebaArisSap.Controllers
                                  from BEZEI in s.GetField<string>("BEZEI")    // CHAR
                                  from VBELN in s.GetField<string>("VBELN")
                                  from KUNNR in s.GetField<string>("KUNNR")
-                                 from KUNWE in s.GetField<DateTime>("KUNWE")
+                                 from KUNWE in s.GetField<string>("KUNWE")
                                  from BSTNK in s.GetField<string>("BSTNK")
                                  from NETWR in s.GetField<string>("NETWR")
                                  from WAERK in s.GetField<string>("WAERK")
-                                 from BSTDK in s.GetField<DateTime>("BSTDK")
+                                 from BSTDK in s.GetField<string>("BSTDK")
                                  from VDATU in s.GetField<DateTime>("VDATU")
                                  from VSBED in s.GetField<string>("VSBED")
-                                 from BRGEW in s.GetField<string>("BRGEW")
+                                 from BRGEW in s.GetField<DateTime>("BRGEW")
                                  from GEWEI in s.GetField<string>("GEWEI")
                                  from NTGEW in s.GetField<string>("NTGEW")
                                  from AUART in s.GetField<string>("AUART")
@@ -77,12 +77,12 @@ namespace WSpruebaArisSap.Controllers
                                  from VTWEG in s.GetField<string>("VTWEG")    // CHAR
                                  from SPART in s.GetField<string>("SPART")
                                  from VKBUR in s.GetField<string>("VKBUR")
-                                 from VKGRP in s.GetField<DateTime>("VKGRP")
-                                 from AUDAT in s.GetField<string>("AUDAT")
+                                 from VKGRP in s.GetField<string>("VKGRP")
+                                 from AUDAT in s.GetField<DateTime>("AUDAT")
                                  from ERNAM in s.GetField<string>("ERNAM")
                                  from AEDAT in s.GetField<string>("AEDAT")
                                  from ERDAT in s.GetField<DateTime>("ERDAT")
-                                 from ERZET in s.GetField<string>("ERZET")
+                                 from ERZET in s.GetField<DateTime>("ERZET")
 
                                  from WAERK_3   in s.GetField<string>("WAERK_3")
                                  from KURSK     in s.GetField<string>("KURSK")
@@ -93,11 +93,11 @@ namespace WSpruebaArisSap.Controllers
                                  from BZIRK     in s.GetField<string>("BZIRK")    // CHAR
                                  from BRGEW_2   in s.GetField<string>("BRGEW_2")
                                  from WAERK_2   in s.GetField<string>("WAERK_2")
-                                 from KUNRG_ANA in s.GetField<DateTime>("KUNRG_ANA")
+                                 from KUNRG_ANA in s.GetField<string>("KUNRG_ANA")
                                  from ZTERM     in s.GetField<string>("ZTERM")
-                                 from FKDAT     in s.GetField<string>("FKDAT")
+                                 from FKDAT     in s.GetField<DateTime>("FKDAT")
                                  from BUKRS_VF  in s.GetField<string>("BUKRS_VF")
-                                 from AKPRZ     in s.GetField<DateTime>("AKPRZ")
+                                 from AKPRZ     in s.GetField<string>("AKPRZ")
 
                                  from DDTEXT_GBSTK in s.GetField<string>("DDTEXT_GBSTK")
                                  from DDTEXT_ABSTK in s.GetField<string>("DDTEXT_ABSTK")
@@ -110,11 +110,11 @@ namespace WSpruebaArisSap.Controllers
                                  from IMPUESTO      in s.GetField<string>("IMPUESTO")
                                  from PARVW         in s.GetField<string>("PARVW")
                                  from KUNNR_3        in s.GetField<string>("KUNNR_3")
-                                 from ASSIGNED_BP   in s.GetField<DateTime>("ASSIGNED_BP")
+                                 from ASSIGNED_BP   in s.GetField<string>("ASSIGNED_BP")
                                  from NAME1         in s.GetField<string>("NAME1")
                                  from STRAS             in s.GetField<string>("STRAS")
                                  from PSTLZ             in s.GetField<string>("PSTLZ")
-                                 from ORT01             in s.GetField<DateTime>("ORT01")
+                                 from ORT01             in s.GetField<string>("ORT01")
                                  from ACTIVIDAD         in s.GetField<string>("ACTIVIDAD")
                                  from MOTIVO_RESCISION      in s.GetField<string>("MOTIVO_RESCISION")
                                  from DOCUMENTO_RESCISION   in s.GetField<string>("DOCUMENTO_RESCISION")

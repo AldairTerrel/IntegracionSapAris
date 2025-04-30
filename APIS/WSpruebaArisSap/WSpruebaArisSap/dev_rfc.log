@@ -432,3 +432,39 @@ ERRNO       10060
 ERRNO TEXT  WSAETIMEDOUT: Connection timed out
 COUNTER     2
 
+
+**** Log file opened at 2025-04-30 10:32:04.177623 UTC-05:00 (Hora est. Pacífico, Sudamérica), Encoding UTF-8
+NW RFC Library: Kernel variant, Release 750 Patch Level 11
+Compilation date          : Jan 25 2023 01:21:13
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1116
+Current working directory : D:\APIS\WSpruebaArisSap\WSpruebaArisSap
+Program                   : WSpruebaArisSap
+Process ID                : 15236
+User                      : aldair.terrel
+Hardware                  : PC with Windows NT 8x AMD64 Level 6 (Mod 140 Step 1)
+Operating_system          : Windows NT 10.0
+Hostname                  : CLRLAP122
+IP address                : 192.168.18.30
+IPv6 address              : fe80::38fa:723e:8a85:173e
+Global trace level        : 0
+
+2025-04-30 10:32:04.170636 [27932] >> Error entry
+	[Handle: 2431017996752	ConvID: 	Target: 	SysID: 	SysNr: 	User: 	Codepage: 4103]
+	RfcCommunicationException: Return Value: 20, Code: RFC_COMMUNICATION_FAILURE, Message: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.45.4.163:3301' not reached
+TIME        Wed Apr 30 10:32:04 2025
+RELEASE     753
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      D:/depot/bas/753_REL/src/base/ni/nixxi.cpp
+LINE        3454
+DETAIL      NiPConnect2: 10.45.4.163:3301
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+

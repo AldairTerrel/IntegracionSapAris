@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace WSpruebaArisSap.Controllers
 {

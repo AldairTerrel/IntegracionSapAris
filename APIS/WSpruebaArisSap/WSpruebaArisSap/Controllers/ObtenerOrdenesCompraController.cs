@@ -56,42 +56,77 @@ namespace WSpruebaArisSap.Controllers
                                         .SetField("SOCIEDAD", SOCIEDAD),
 
 
-                        Output: f => f
-                            .MapTable("ET_CABECERA", s =>
-                                 from EBELN in s.GetField<string>("EBELN")    // CHAR
-                                 from BSART in s.GetField<string>("BSART")
-                                 from CENTRO_SUMINISTRADOR in s.GetField<string>("CENTRO_SUMINISTRADOR")
-                                 from BEDAT in s.GetField<DateTime>("BEDAT")
-                                 from EKORG in s.GetField<string>("EKORG")
-                                 from EKGRP in s.GetField<string>("EKGRP")
-                                 from BUKRS in s.GetField<string>("BUKRS")
-                                 from AEDAT in s.GetField<DateTime>("AEDAT")
-                                 from ERNAM in s.GetField<string>("ERNAM")
-                                 from FEC_MODIF in s.GetField<string>("FEC_MODIF")
-                                 from USU_MODIF in s.GetField<string>("USU_MODIF")
-                                 from ZZ_LUG_ENTR in s.GetField<string>("ZZ_LUG_ENTR")
-                                 from CAMPO_NO_UTILIZADO in s.GetField<string>("CAMPO_NO_UTILIZADO")
-                                 from SUMINISTRO_COMPLETO in s.GetField<string>("SUMINISTRO_COMPLETO")
-                                 from MENSAJE_EM in s.GetField<string>("MENSAJE_EM")
+                        Output: f => (
+                    from ET_CABECERA in f.MapTable("ET_CABECERA", s =>
+                        from EBELN in s.GetField<string>("EBELN")
+                        from BSART in s.GetField<string>("BSART")
+                        from CENTRO_SUMINISTRADOR in s.GetField<string>("CENTRO_SUMINISTRADOR")
+                        from BEDAT in s.GetField<DateTime>("BEDAT")
+                        from EKORG in s.GetField<string>("EKORG")
+                        from EKGRP in s.GetField<string>("EKGRP")
+                        from BUKRS in s.GetField<string>("BUKRS")
+                        from AEDAT in s.GetField<DateTime>("AEDAT")
+                        from ERNAM in s.GetField<string>("ERNAM")
+                        from FEC_MODIF in s.GetField<string>("FEC_MODIF")
+                        from USU_MODIF in s.GetField<string>("USU_MODIF")
+                        from ZZ_LUG_ENTR in s.GetField<string>("ZZ_LUG_ENTR")
+                        from CAMPO_NO_UTILIZADO in s.GetField<string>("CAMPO_NO_UTILIZADO")
+                        from SUMINISTRO_COMPLETO in s.GetField<string>("SUMINISTRO_COMPLETO")
+                        from MENSAJE_EM in s.GetField<string>("MENSAJE_EM")
+                        select new
+                        {
+                            EBELN,
+                            BSART,
+                            CENTRO_SUMINISTRADOR,
+                            BEDAT,
+                            EKORG,
+                            EKGRP,
+                            BUKRS,
+                            AEDAT,
+                            ERNAM,
+                            FEC_MODIF,
+                            USU_MODIF,
+                            ZZ_LUG_ENTR,
+                            CAMPO_NO_UTILIZADO,
+                            SUMINISTRO_COMPLETO,
+                            MENSAJE_EM,
+                        })
 
-                                 select new
-                                 {
-                                     EBELN,
-                                     BSART,
-                                     CENTRO_SUMINISTRADOR,
-                                     BEDAT,
-                                     EKORG,
-                                     EKGRP,
-                                     BUKRS,
-                                     AEDAT,
-                                     ERNAM,
-                                     FEC_MODIF,
-                                     USU_MODIF,
-                                     ZZ_LUG_ENTR,
-                                     CAMPO_NO_UTILIZADO,
-                                     SUMINISTRO_COMPLETO,
-                                     MENSAJE_EM,
-                                 }));
+                    from ET_DETALLE in f.MapTable("ET_DETALLE", s =>
+                        from EBELN in s.GetField<decimal>("EBELN")
+                        from EBELP in s.GetField<string>("EBELP")
+                        from PSTYP in s.GetField<string>("PSTYP")
+                        from TXZ01 in s.GetField<string>("TXZ01")
+                        from MENGE in s.GetField<string>("MENGE")
+                        select new
+                        {
+                            EBELN,
+                            EBELP,
+                            PSTYP,
+                            TXZ01,
+                            MENGE
+                        })
+
+                    from ET_HISTORIAL in f.MapTable("ET_HISTORIAL", s =>
+                        from EBELN in s.GetField<string>("EBELN")
+                        from EBELP in s.GetField<string>("EBELP")
+                        from BWART in s.GetField<string>("BWART")
+                        from BELNR in s.GetField<string>("BELNR")
+                        select new
+                        {
+                            EBELN,
+                            EBELP,
+                            BWART,
+                            BELNR
+                        })
+
+                    select new
+                    {
+                        ET_CABECERA,
+                        ET_DETALLE,
+                        ET_HISTORIAL
+                    })
+            );
                     return Ok(new
                     {
                         Data = result.Case

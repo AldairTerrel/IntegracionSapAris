@@ -26,6 +26,41 @@
         "Name": "UARIS_MOD",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "MATNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WERKS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LGORT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CHARG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "REFMG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AUFNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_MOV_TYPE",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -284,17 +319,12 @@
         "IsRequired": false
       },
       {
-        "Name": "TIPO_DOCU",
+        "Name": "NRO_PEDIDO",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "SOCIEDAD",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "NRO_PEDIDO",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -311,6 +341,82 @@
     "Parameters": [
       {
         "Name": "E_PEDIDO",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.RegistroMermaAlmacenProdController",
+    "Method": "GetRegistroMermaAlmacenProd",
+    "RelativePath": "api/RegistroMermaAlmacenProdController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "I_MIGO_PED_IMP",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "I_MIGO_MERMAS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BUDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BLDAT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EBELN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_CREA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MATNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WERKS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LGORT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CHARG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ENTRY_QNT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COST_CENTER",
         "Type": "System.String",
         "IsRequired": false
       }

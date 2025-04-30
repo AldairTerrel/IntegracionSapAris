@@ -15,28 +15,88 @@
             "name": "BUDAT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "BLDAT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "UARIS_CREA",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "UARIS_MOD",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MATNR",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "WERKS",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "LGORT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "CHARG",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "REFMG",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "AUFNR",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "I_MOV_TYPE",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           }
         ],
@@ -383,32 +443,28 @@
             "name": "FEC_CREA_INICIO",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "FEC_CREA_FIN",
             "in": "query",
             "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "TIPO_DOCU",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "SOCIEDAD",
-            "in": "query",
-            "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "NRO_PEDIDO",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "SOCIEDAD",
             "in": "query",
             "schema": {
               "type": "string",
@@ -434,6 +490,124 @@
             "in": "query",
             "schema": {
               "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RegistroMermaAlmacenProdController": {
+      "get": {
+        "tags": [
+          "RegistroMermaAlmacenProd"
+        ],
+        "parameters": [
+          {
+            "name": "I_MIGO_PED_IMP",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "I_MIGO_MERMAS",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "BUDAT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "BLDAT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "EBELN",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "UARIS_CREA",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "UARIS_MOD",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MATNR",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "WERKS",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "LGORT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "CHARG",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "ENTRY_QNT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "COST_CENTER",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           }
         ],
