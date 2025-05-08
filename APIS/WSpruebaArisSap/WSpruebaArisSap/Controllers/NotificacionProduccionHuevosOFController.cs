@@ -10,34 +10,34 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using LanguageExt;
+
+
 
 namespace WSpruebaArisSap.Controllers
 {
     [ApiController]
     [Route("api/")]
-    public class RegistroMermaAlmacenProdController : ControllerBase
+    public class NotificacionProduccionHuevosOFController : ControllerBase
     {
-        public class NotConsOiItem
+       public class NotConsOiItem
         {
             public string MATNR { get; set; }
             public string WERKS { get; set; }
             public string LGORT { get; set; }
             public string CHARG { get; set; }
             public string ENTRY_QNT { get; set; }
-            public string COST_CENTER { get; set; }
         }
 
         private readonly IConfiguration _configuration;
 
-        public RegistroMermaAlmacenProdController(IConfiguration configuration)
+        public NotificacionProduccionHuevosOFController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        [HttpGet("RegistroMermaAlmacenProdController")]
-        public async Task<IActionResult> GetRegistroMermaAlmacenProd(string I_MIGO_PED_IMP="",string I_MIGO_MERMAS ="", string BUDAT ="", string BLDAT = "",
-            string EBELN ="", string UARIS_CREA = "", string UARIS_MOD = "", string MATNR = "", string WERKS = "", string LGORT = "", string CHARG = "", string ENTRY_QNT = "", string COST_CENTER = "")
+        [HttpGet("NotificacionProduccionHuevosOFController")]
+        public async Task<IActionResult> GetNotificacionProduccionHuevosOF(string BUDAT="", string AUFNR = "", decimal? YIELD=null, string UARIS_CREA = "", string UARIS_MOD = "",
+             string MATNR = "", string WERKS = "", string LGORT = "", string CHARG = "", string ENTRY_QNT = "")
         {
             var settings = new Dictionary<string, string>
             {
@@ -56,14 +56,16 @@ namespace WSpruebaArisSap.Controllers
             {
                 try
                 {
-
-                    I_MIGO_PED_IMP = string.IsNullOrEmpty(I_MIGO_PED_IMP) ? "" : I_MIGO_PED_IMP;
-                    I_MIGO_MERMAS = string.IsNullOrEmpty(I_MIGO_MERMAS) ? "" : I_MIGO_MERMAS;
                     BUDAT = string.IsNullOrEmpty(BUDAT) ? "" : BUDAT;
-                    BLDAT = string.IsNullOrEmpty(BLDAT) ? "" : BLDAT;
+                    AUFNR = string.IsNullOrEmpty(AUFNR) ? "" : AUFNR;
+                    AUFNR = string.IsNullOrEmpty(AUFNR) ? "" : AUFNR;
                     UARIS_CREA = string.IsNullOrEmpty(UARIS_CREA) ? "" : UARIS_CREA;
                     UARIS_MOD = string.IsNullOrEmpty(UARIS_MOD) ? "" : UARIS_MOD;
-
+                    MATNR = string.IsNullOrEmpty(MATNR) ? "" : MATNR;
+                    WERKS = string.IsNullOrEmpty(WERKS) ? "" : WERKS;
+                    LGORT = string.IsNullOrEmpty(LGORT) ? "" : LGORT;
+                    CHARG = string.IsNullOrEmpty(CHARG) ? "" : CHARG;
+                    ENTRY_QNT = string.IsNullOrEmpty(ENTRY_QNT) ? "" : ENTRY_QNT;
 
                     var items = new List<NotConsOiItem>
 {
@@ -74,53 +76,28 @@ namespace WSpruebaArisSap.Controllers
                                 LGORT = LGORT,
                                 CHARG = CHARG,
                                 ENTRY_QNT = ENTRY_QNT,
-                                COST_CENTER = COST_CENTER,
-                            }
-                            
-                    };
 
-                    var result = await context.CallFunction("ZMM_FM_GEN_MIGO_PED",
-                        Input: f => f
-                        .SetField("I_MIGO_PED_IMP", I_MIGO_PED_IMP)
-                         .SetField("I_MIGO_MERMAS", I_MIGO_MERMAS)
-                        .SetStructure("ES_CABECERA_MIGO", s =>s
-                        .SetField("BUDAT", DateTime.ParseExact(BUDAT, "dd.MM.yyyy", null))
-                        .SetField("BLDAT", DateTime.ParseExact(BLDAT, "dd.MM.yyyy", null))
-                        .SetField("EBELN", EBELN)
-                        .SetField("UARIS_CREA", UARIS_CREA)
-                        .SetField("UARIS_MOD", UARIS_MOD))
-                          .SetTable("T_DETALLE_MIGO", items,
+                            }
+
+                    };
+                    var result = await context.CallFunction("ZPP_FM_NOT_PRD_ORDEN_FAB",
+                        Input: f => f.SetStructure("ES_CAB_NOT_PRD_OF", s => s
+                                        .SetField("BUDAT", DateTime.ParseExact(BUDAT, "dd.MM.yyyy", null))
+                                        .SetField("AUFNR", AUFNR)
+                                        .SetField("YIELD", YIELD)
+                                        .SetField("UARIS_CREA", UARIS_CREA)
+                                        .SetField("UARIS_MOD", UARIS_MOD))
+                        .SetTable("IT_POS_NOT_PRD_OF", items,
                                          (structure, items) => structure
                                                  .SetField("MATNR", items.MATNR)
                                                  .SetField("WERKS", items.WERKS)
                                                  .SetField("LGORT", items.LGORT)
                                                  .SetField("CHARG", items.CHARG)
-                                                 .SetField("ENTRY_QNT", items.ENTRY_QNT)
-                                                 .SetField("COST_CENTER", items.COST_CENTER)
-                        ),
-
-
-                        Output: f => (
-                        from E_DOC_MATNR in f.GetField<string>("E_DOC_MATNR")
-                        from T_DETALLE_MIGO in f.MapTable("T_DETALLE_MIGO", s =>
-                        from MATNR in s.GetField<string>("MATNR")
-                        from WERKS in s.GetField<string>("WERKS")
-                        from LGORT in s.GetField<string>("LGORT")
-                        from CHARG in s.GetField<string>("CHARG")
-                        from ENTRY_QNT in s.GetField<string>("ENTRY_QNT")
-                        from COST_CENTER in s.GetField<string>("COST_CENTER")
-
-                        select new
-                        {
-
-                            MATNR,
-                            WERKS,
-                            LGORT,
-                            CHARG,
-                            ENTRY_QNT,
-                            COST_CENTER
-
-                        })
+                                                 .SetField("ENTRY_QNT", items.ENTRY_QNT)),
+                      Output: f => (
+                           from E_DOC_MATNR in f.GetField<string>("E_DOC_MATNR")
+                           from E_ORDEN_FAB in f.GetField<string>("E_ORDEN_FAB")
+                           from E_NOTIF in f.GetField<string>("E_NOTIF")
 
                            from T_RETURN in f.MapTable("T_RETURN", s =>
                                from TYPE in s.GetField<decimal>("TYPE")
@@ -159,12 +136,13 @@ namespace WSpruebaArisSap.Controllers
                                    SYSTEM
                                })
 
-                           
+
 
                            select new
                            {
                                E_DOC_MATNR,
-                               T_DETALLE_MIGO,
+                               E_ORDEN_FAB,
+                               E_NOTIF,
                                T_RETURN
                            })
             );

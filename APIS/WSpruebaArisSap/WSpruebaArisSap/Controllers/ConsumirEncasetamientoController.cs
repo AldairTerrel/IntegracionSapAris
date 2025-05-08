@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Globalization;
 
 namespace WSpruebaArisSap.Controllers
 {
@@ -24,6 +25,7 @@ namespace WSpruebaArisSap.Controllers
             public string LGORT { get; set; }
             public string CHARG { get; set; }
             public string REFMG { get; set; }
+            public string AUFNR { get; set; }
         }
 
         private readonly IConfiguration _configuration;
@@ -64,7 +66,7 @@ namespace WSpruebaArisSap.Controllers
                     LGORT = string.IsNullOrEmpty(LGORT) ? "" : LGORT;
                     CHARG = string.IsNullOrEmpty(CHARG) ? "" : CHARG;
                     REFMG = string.IsNullOrEmpty(REFMG) ? "" : REFMG;
-                    AUFNR = string.IsNullOrEmpty(BUDAT) ? "" : BUDAT;
+                    AUFNR = string.IsNullOrEmpty(AUFNR) ? "" : AUFNR;
                     I_MOV_TYPE = string.IsNullOrEmpty(I_MOV_TYPE) ? "" : I_MOV_TYPE;
 
                     var items = new List<NotConsOiItem>
@@ -75,7 +77,8 @@ namespace WSpruebaArisSap.Controllers
                                 WERKS = WERKS,
                                 LGORT = LGORT,
                                 CHARG = CHARG,
-                                REFMG = REFMG
+                                REFMG = REFMG,
+                                AUFNR=AUFNR
                             }
                             // Si quieres agregar más filas, simplemente añade más objetos aquí
                     };
@@ -94,26 +97,60 @@ namespace WSpruebaArisSap.Controllers
                                                  .SetField("LGORT", items.LGORT)
                                                  .SetField("CHARG", items.CHARG)
                                                  .SetField("REFMG", items.REFMG)
+                                                 .SetField("AUFNR", items.AUFNR)
                         )
-                        
                        .SetField("I_MOV_TYPE", I_MOV_TYPE),
-                                       
 
 
 
-                        Output: f => f
-                            .MapTable("T_RETURN", s =>
-                                 from TYPE in s.GetField<string>("TYPE")    // CHAR
-                                 from ID in s.GetField<string>("ID")    // CHAR
-                                 from NUMBER in s.GetField<string>("NUMBER")    // CHAR
-                                 from MESSAGE in s.GetField<string>("MESSAGE")
-                                 select new
-                                 {
-                                     TYPE,
-                                     ID,
-                                     NUMBER,
-                                     MESSAGE
-                                 }));
+
+                       Output: f => (
+                        from E_DOC_MATNR in f.GetField<string>("E_DOC_MATNR")
+                        from T_RETURN in f.MapTable("T_RETURN", s =>
+                            from TYPE in s.GetField<decimal>("TYPE")
+                            from ID in s.GetField<string>("ID")
+                            from NUMBER in s.GetField<string>("NUMBER")
+                            from MESSAGE in s.GetField<string>("MESSAGE")
+                            from LOG_NO in s.GetField<string>("LOG_NO")
+                            from LOG_MSG_NO in s.GetField<decimal>("LOG_MSG_NO")
+                            from MESSAGE_V1 in s.GetField<string>("MESSAGE_V1")
+                            from MESSAGE_V2 in s.GetField<string>("MESSAGE_V2")
+                            from MESSAGE_V3 in s.GetField<string>("MESSAGE_V3")
+                            from MESSAGE_V4 in s.GetField<string>("MESSAGE_V4")
+                            from PARAMETER in s.GetField<string>("PARAMETER")
+                            from ROW in s.GetField<string>("ROW")
+                            from FIELD in s.GetField<string>("FIELD")
+                            from SYSTEM in s.GetField<string>("SYSTEM")
+
+
+
+
+                            select new
+                            {
+                                TYPE,
+                                ID,
+                                NUMBER,
+                                MESSAGE,
+                                LOG_NO,
+                                LOG_MSG_NO,
+                                MESSAGE_V1,
+                                MESSAGE_V2,
+                                MESSAGE_V3,
+                                MESSAGE_V4,
+                                PARAMETER,
+                                ROW,
+                                FIELD,
+                                SYSTEM
+                            })
+
+
+
+                        select new
+                        {
+                            E_DOC_MATNR,
+                            T_RETURN
+                        })
+            );
 
                     return Ok(new
                     {

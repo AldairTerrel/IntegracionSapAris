@@ -28,7 +28,7 @@ namespace WSpruebaArisSap.Controllers
 
         [HttpGet("UpdateOrdenesProduccionController")]
 
-        public async Task<IActionResult> GetCreateOrdenInversion(string I_ORDERID ="", string I_LIB = "", string I_CTEC = "", string I_REAP = "", string I_BLOQ = "", string I_DESBLOQ = "", string I_CERR = "", string I_BORR = "", string I_ANUL_BORR = "", string I_LOTE = "" , string I_FECH_CIERRE = "", string I_UARIS_MOD = "")
+        public async Task<IActionResult> GetCreateOrdenInversion(string I_ORDERID ="", string I_LIB = "", string I_CTEC = "", string I_REAP = "", string I_BLOQ = "", string I_DESBLOQ = "", string I_CERR = "", string I_BORR = "", string I_ANUL_BORR = "", string I_LOTE = "" ,string I_FECH_CIERRE="", string I_UARIS_MOD = "")
         {
           
 
@@ -39,7 +39,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "EN"}
+                {"lang", "ES"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);
@@ -49,9 +49,17 @@ namespace WSpruebaArisSap.Controllers
             {
                 try
                 {
+                    I_ORDERID = string.IsNullOrEmpty(I_ORDERID) ? "" : I_ORDERID;
                     I_LIB = string.IsNullOrEmpty(I_LIB) ? "" : I_LIB;
-
-
+                    I_CTEC = string.IsNullOrEmpty(I_CTEC) ? "" : I_CTEC;
+                    I_LIB = string.IsNullOrEmpty(I_LIB) ? "" : I_REAP;
+                    I_BLOQ = string.IsNullOrEmpty(I_BLOQ) ? "" : I_BLOQ;
+                    I_DESBLOQ = string.IsNullOrEmpty(I_DESBLOQ) ? "" : I_DESBLOQ;
+                    I_CERR = string.IsNullOrEmpty(I_CERR) ? "" : I_CERR;
+                    I_BORR = string.IsNullOrEmpty(I_BORR) ? "" : I_BORR;
+                    I_ANUL_BORR = string.IsNullOrEmpty(I_ANUL_BORR) ? "" : I_ANUL_BORR;
+                    I_LOTE = string.IsNullOrEmpty(I_LOTE) ? "" : I_LOTE;
+                    I_UARIS_MOD = string.IsNullOrEmpty(I_UARIS_MOD) ? "" : I_UARIS_MOD;
                     var result = await context.CallFunction("ZPP_FM_ACT_ESTADO_OF",
                         Input: f => f
                                         .SetField("I_ORDERID", I_ORDERID)
@@ -64,7 +72,7 @@ namespace WSpruebaArisSap.Controllers
                                         .SetField("I_BORR", I_BORR)
                                         .SetField("I_ANUL_BORR", I_ANUL_BORR)
                                         .SetField("I_LOTE", I_LOTE)
-                                        .SetField("I_FECH_CIERRE", string.IsNullOrWhiteSpace(I_FECH_CIERRE) ? new DateTime(1, 1, 1)  // equivalente a 0001-01-01
+                                         .SetField("I_FECH_CIERRE", string.IsNullOrWhiteSpace(I_FECH_CIERRE) ? new DateTime(1, 1, 1)  // equivalente a 0001-01-01
                                                                                                                                     : DateTime.ParseExact(I_FECH_CIERRE, "dd.MM.yyyy", null))
                                         .SetField("I_UARIS_MOD", I_UARIS_MOD),
                         Output: f => f

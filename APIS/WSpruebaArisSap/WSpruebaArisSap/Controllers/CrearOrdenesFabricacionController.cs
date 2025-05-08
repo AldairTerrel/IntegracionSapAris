@@ -25,7 +25,8 @@ namespace WSpruebaArisSap.Controllers
         }
 
         [HttpGet("CrearOrdenesFabricacionController")]
-        public async Task<IActionResult> GetUpdateOrdenInversion(string MATNR, string WERKS, string AUFART , decimal GAMNG , string START_DATE , string END_DATE,string DISPO,string FEVOR,string INSMK,string LGORT,string CHARG)
+        public async Task<IActionResult> GetUpdateOrdenInversion(string MATNR="", string WERKS = "", string AUFART = "" , decimal? GAMNG = null, string START_DATE = "", string END_DATE = "", string DISPO = "", string FEVOR = "",
+            string INSMK = "", string LGORT = "", string CHARG = "")
         {
             var settings = new Dictionary<string, string>
             {
@@ -34,7 +35,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "EN"}
+                {"lang", "ES"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);
@@ -44,8 +45,18 @@ namespace WSpruebaArisSap.Controllers
             {
                 try
                 {
+                    MATNR = string.IsNullOrEmpty(MATNR) ? "" : MATNR;
+                    WERKS = string.IsNullOrEmpty(WERKS) ? "" : WERKS;
+                    AUFART = string.IsNullOrEmpty(AUFART) ? "" : AUFART;
+                    
+                    START_DATE = string.IsNullOrEmpty(START_DATE) ? "" : START_DATE;
+                    END_DATE = string.IsNullOrEmpty(END_DATE) ? "" : END_DATE;
+                    DISPO = string.IsNullOrEmpty(DISPO) ? "" : DISPO;
+                    FEVOR = string.IsNullOrEmpty(FEVOR) ? "" : FEVOR;
+                    INSMK = string.IsNullOrEmpty(INSMK) ? "" : INSMK;
+                    LGORT = string.IsNullOrEmpty(LGORT) ? "" : LGORT;
+                    CHARG = string.IsNullOrEmpty(CHARG) ? "" : CHARG;
 
-             
                     var result = await context.CallFunction("ZPP_FM_CREATE_ORDEN_FAB",
                         Input: f => f.SetStructure("IS_DAT_ORDEN_FAB", s => s
                                         .SetField("MATNR", MATNR)
@@ -60,19 +71,51 @@ namespace WSpruebaArisSap.Controllers
                                         .SetField("LGORT", LGORT)
                                         .SetField("CHARG", CHARG)), 
 
-                        Output: f => f
-                            .MapTable("T_RETURN", s =>
-                                 from TYPE in s.GetField<string>("TYPE")    // CHAR
-                                 from ID in s.GetField<string>("ID")    // CHAR
-                                 from NUMBER in s.GetField<string>("NUMBER")    // CHAR
-                                 from MESSAGE in s.GetField<string>("MESSAGE")
-                                 select new
-                                 {
-                                     TYPE,
-                                     ID,
-                                     NUMBER,
-                                     MESSAGE
-                                 }));
+                        Output: f => (
+                        from E_ORDER_NUMBER in f.GetField<string>("E_ORDER_NUMBER")
+                   
+                        from E_STATUS_ORDER in f.GetField<string>("E_STATUS_ORDER")
+
+                        from T_RETURN in f.MapTable("T_RETURN", s =>
+                            from TYPE in s.GetField<decimal>("TYPE")
+                            from ID in s.GetField<string>("ID")
+                            from NUMBER in s.GetField<string>("NUMBER")
+                            from MESSAGE in s.GetField<string>("MESSAGE")
+                            from LOG_NO in s.GetField<string>("LOG_NO")
+                            from LOG_MSG_NO in s.GetField<decimal>("LOG_MSG_NO")
+                            from MESSAGE_V1 in s.GetField<string>("MESSAGE_V1")
+                            from MESSAGE_V2 in s.GetField<string>("MESSAGE_V2")
+                            from MESSAGE_V3 in s.GetField<string>("MESSAGE_V3")
+                            from MESSAGE_V4 in s.GetField<string>("MESSAGE_V4")
+                            from PARAMETER in s.GetField<string>("PARAMETER")
+                            from ROW in s.GetField<string>("ROW")
+                            from FIELD in s.GetField<string>("FIELD")
+                            from SYSTEM in s.GetField<string>("SYSTEM")
+
+                        select new
+                        {
+                            TYPE,
+                            ID,
+                            NUMBER,
+                            MESSAGE,
+                            LOG_NO,
+                            LOG_MSG_NO,
+                            MESSAGE_V1,
+                            MESSAGE_V2,
+                            MESSAGE_V3,
+                            MESSAGE_V4,
+                            PARAMETER,
+                            ROW,
+                            FIELD,
+                            SYSTEM
+                        })
+
+                        select new
+                            {
+                            E_ORDER_NUMBER,
+                            E_STATUS_ORDER,
+                            T_RETURN
+                            }));
 
                     return Ok(new
                     {

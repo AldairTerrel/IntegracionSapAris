@@ -10,28 +10,22 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Diagnostics.Metrics;
-using System.Text.RegularExpressions;
-using LanguageExt;
-using LanguageExt.ClassInstances.Pred;
-using LanguageExt.ClassInstances;
-using System.Runtime.InteropServices.JavaScript;
 
 namespace WSpruebaArisSap.Controllers
 {
     [ApiController]
     [Route("api/")]
-    public class ObtenerOrdenesCompraController : ControllerBase
+    public class ObtenerMaterialController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public ObtenerOrdenesCompraController(IConfiguration configuration)
+        public ObtenerMaterialController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        [HttpGet("ObtenerOrdenesCompraController")]
-        public async Task<IActionResult> GetObtenerOrdenesCompra(string FEC_CREA_INICIO = "", string FEC_CREA_FIN = "", string TIPO_DOCU = "", string NRO_PEDIDO = "", string SOCIEDAD="")
+        [HttpGet("ObtenerMaterialController")]
+        public async Task<IActionResult> GetObtenerMaterial(string FEC_CREA_INICIO, string FEC_CREA_FIN, string TIPO_DOCU, string SOCIEDAD, string NRO_PEDIDO = "")
         {
             var settings = new Dictionary<string, string>
             {
@@ -40,7 +34,7 @@ namespace WSpruebaArisSap.Controllers
                 {"client", "200"},
                 {"user", "USU_INTEGRAC"},
                 {"passwd","Rocio*25"},
-                {"lang", "ES"}
+                {"lang", "EN"}
             };
 
             var connectionBuilder = new ConnectionBuilder(settings);
@@ -51,12 +45,8 @@ namespace WSpruebaArisSap.Controllers
                 try
                 {
 
-                    FEC_CREA_INICIO = string.IsNullOrEmpty(FEC_CREA_INICIO) ? "" : FEC_CREA_INICIO;
-                    FEC_CREA_FIN = string.IsNullOrEmpty(FEC_CREA_FIN) ? "" : FEC_CREA_FIN;
-                    TIPO_DOCU = string.IsNullOrEmpty(TIPO_DOCU) ? "" : TIPO_DOCU;
                     NRO_PEDIDO = string.IsNullOrEmpty(NRO_PEDIDO) ? "" : NRO_PEDIDO;
-                    SOCIEDAD = string.IsNullOrEmpty(SOCIEDAD) ? "" : SOCIEDAD;
-
+                
                     var result = await context.CallFunction("ZMM_PEDIDO_TRASLADO",
                         Input: f => f
                                         .SetField("FEC_CREA_INICIO", DateTime.ParseExact(FEC_CREA_INICIO, "dd.MM.yyyy", null))
@@ -106,48 +96,15 @@ namespace WSpruebaArisSap.Controllers
                         from EBELN in s.GetField<decimal>("EBELN")
                         from EBELP in s.GetField<string>("EBELP")
                         from PSTYP in s.GetField<string>("PSTYP")
-                        from MATNR in s.GetField<string>("MATNR")
                         from TXZ01 in s.GetField<string>("TXZ01")
                         from MENGE in s.GetField<string>("MENGE")
-                        from MEINS in s.GetField<string>("MEINS")
-                        from LPEIN in s.GetField<string>("LPEIN")
-                        from EINDT in s.GetField<DateTime>("EINDT")
-                       from NETPR  in s.GetField<string>("NETPR")
-                       from WAERS  in s.GetField<string>("WAERS")
-                       from PEINH  in s.GetField<string>("PEINH")
-                       from MATKL  in s.GetField<string>("MATKL")
-                       from WERKS  in s.GetField<string>("WERKS")
-                       from LGORT  in s.GetField<string>("LGORT")
-                       from CHARG  in s.GetField<string>("CHARG")
-                       from GRATIS in s.GetField<string>("GRATIS")
-                       from AFNAM  in s.GetField<string>("AFNAM")
-                       from BANFN in s.GetField<string>("BANFN")
-                        from BNFPO in s.GetField<string>("BNFPO")
-
                         select new
                         {
                             EBELN,
                             EBELP,
                             PSTYP,
-                            MATNR,
                             TXZ01,
-                            MENGE,
-                            MEINS,
-                            LPEIN,
-                            EINDT,
-                            NETPR,
-                            WAERS,
-                            PEINH,
-                            MATKL,
-                            WERKS,
-                            LGORT,
-                            CHARG,
-                            GRATIS,
-                            AFNAM,
-                            BANFN,
-                            BNFPO
-
-
+                            MENGE
                         })
 
                     from ET_HISTORIAL in f.MapTable("ET_HISTORIAL", s =>
@@ -155,58 +112,19 @@ namespace WSpruebaArisSap.Controllers
                         from EBELP in s.GetField<string>("EBELP")
                         from BWART in s.GetField<string>("BWART")
                         from BELNR in s.GetField<string>("BELNR")
-                        from BUDAT in s.GetField<string>("BUDAT")
-                        from MENGE in s.GetField<string>("MENGE")
                         select new
                         {
                             EBELN,
                             EBELP,
                             BWART,
-                            BELNR,
-                            BUDAT,
-                            MENGE
+                            BELNR
                         })
-                    from ET_RETURN in f.MapTable("ET_RETURN", s =>
-                     from TYPE in s.GetField<string>("TYPE")
-                     from ID in s.GetField<string>("ID")
-                     from NUMBER in s.GetField<string>("NUMBER")
-                     from MESSAGE in s.GetField<string>("MESSAGE")
-                     from LOG_NO in s.GetField<string>("LOG_NO")
-                     from LOG_MSG_NO in s.GetField<decimal>("LOG_MSG_NO")
-                     from MESSAGE_V1 in s.GetField<string>("MESSAGE_V1")
-                     from MESSAGE_V2 in s.GetField<string>("MESSAGE_V2")
-                     from MESSAGE_V3 in s.GetField<string>("MESSAGE_V3")
-                     from MESSAGE_V4 in s.GetField<string>("MESSAGE_V4")
-                     from PARAMETER in s.GetField<string>("PARAMETER")
-                     from ROW in s.GetField<string>("ROW")
-                     from FIELD in s.GetField<string>("FIELD")
-                     from SYSTEM in s.GetField<string>("SYSTEM")
-
-
-                     select new
-                     {
-                         TYPE,
-                         ID,
-                         NUMBER,
-                         MESSAGE,
-                         LOG_NO,
-                         LOG_MSG_NO,
-                         MESSAGE_V1,
-                         MESSAGE_V2,
-                         MESSAGE_V3,
-                         MESSAGE_V4,
-                         PARAMETER,
-                         ROW,
-                         FIELD,
-                         SYSTEM
-                     })
 
                     select new
                     {
                         ET_CABECERA,
                         ET_DETALLE,
-                        ET_HISTORIAL,
-                        ET_RETURN
+                        ET_HISTORIAL
                     })
             );
                     return Ok(new
