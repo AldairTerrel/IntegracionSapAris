@@ -1,0 +1,11 @@
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\bin\Debug\net8.0\Dominio.deps.json
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\bin\Debug\net8.0\Dominio.dll
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\bin\Debug\net8.0\Dominio.pdb
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.dll
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\Dominio.pdb
+D:\wost\01.IntegracionOdoo\IntegracionOdooSAPRocio\Dominio\obj\Debug\net8.0\ref\Dominio.dll
