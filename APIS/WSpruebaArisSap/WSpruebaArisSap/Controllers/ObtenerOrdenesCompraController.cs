@@ -16,6 +16,7 @@ using LanguageExt;
 using LanguageExt.ClassInstances.Pred;
 using LanguageExt.ClassInstances;
 using System.Runtime.InteropServices.JavaScript;
+using System.Runtime.InteropServices;
 
 namespace WSpruebaArisSap.Controllers
 {
@@ -33,6 +34,12 @@ namespace WSpruebaArisSap.Controllers
         [HttpGet("ObtenerOrdenesCompraController")]
         public async Task<IActionResult> GetObtenerOrdenesCompra(string FEC_CREA_INICIO = "", string FEC_CREA_FIN = "", string TIPO_DOCU = "", string NRO_PEDIDO = "", string SOCIEDAD="")
         {
+
+            string basePath = Path.Combine(AppContext.BaseDirectory, "Recursos");
+            NativeLibrary.Load(Path.Combine(basePath, "icuuc50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icudt50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icuin50.dll"));
+
             var settings = new Dictionary<string, string>
             {
                 {"ashost", "10.45.4.163"},
@@ -112,16 +119,16 @@ namespace WSpruebaArisSap.Controllers
                         from MEINS in s.GetField<string>("MEINS")
                         from LPEIN in s.GetField<string>("LPEIN")
                         from EINDT in s.GetField<DateTime>("EINDT")
-                       from NETPR  in s.GetField<string>("NETPR")
-                       from WAERS  in s.GetField<string>("WAERS")
-                       from PEINH  in s.GetField<string>("PEINH")
-                       from MATKL  in s.GetField<string>("MATKL")
-                       from WERKS  in s.GetField<string>("WERKS")
-                       from LGORT  in s.GetField<string>("LGORT")
-                       from CHARG  in s.GetField<string>("CHARG")
-                       from GRATIS in s.GetField<string>("GRATIS")
-                       from AFNAM  in s.GetField<string>("AFNAM")
-                       from BANFN in s.GetField<string>("BANFN")
+                        from NETPR  in s.GetField<string>("NETPR")
+                        from WAERS  in s.GetField<string>("WAERS")
+                        from PEINH  in s.GetField<string>("PEINH")
+                        from MATKL  in s.GetField<string>("MATKL")
+                        from WERKS  in s.GetField<string>("WERKS")
+                        from LGORT  in s.GetField<string>("LGORT")
+                        from CHARG  in s.GetField<string>("CHARG")
+                        from GRATIS in s.GetField<string>("GRATIS")
+                        from AFNAM  in s.GetField<string>("AFNAM")
+                        from BANFN in s.GetField<string>("BANFN")
                         from BNFPO in s.GetField<string>("BNFPO")
 
                         select new
@@ -146,8 +153,6 @@ namespace WSpruebaArisSap.Controllers
                             AFNAM,
                             BANFN,
                             BNFPO
-
-
                         })
 
                     from ET_HISTORIAL in f.MapTable("ET_HISTORIAL", s =>

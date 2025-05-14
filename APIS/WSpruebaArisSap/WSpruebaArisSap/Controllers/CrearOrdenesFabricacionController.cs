@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.InteropServices;
 
 namespace WSpruebaArisSap.Controllers
 {
@@ -28,6 +29,10 @@ namespace WSpruebaArisSap.Controllers
         public async Task<IActionResult> GetUpdateOrdenInversion(string MATNR="", string WERKS = "", string AUFART = "" , decimal? GAMNG = null, string START_DATE = "", string END_DATE = "", string DISPO = "", string FEVOR = "",
             string INSMK = "", string LGORT = "", string CHARG = "")
         {
+            string basePath = Path.Combine(AppContext.BaseDirectory, "Recursos");
+            NativeLibrary.Load(Path.Combine(basePath, "icuuc50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icudt50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icuin50.dll"));
             var settings = new Dictionary<string, string>
             {
                 {"ashost", "10.45.4.163"},

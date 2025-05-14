@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.InteropServices;
 
 
 
@@ -30,7 +31,10 @@ namespace WSpruebaArisSap.Controllers
 
         public async Task<IActionResult> GetCreateOrdenInversion(string I_ORDERID ="", string I_LIB = "", string I_CTEC = "", string I_REAP = "", string I_BLOQ = "", string I_DESBLOQ = "", string I_CERR = "", string I_BORR = "", string I_ANUL_BORR = "", string I_LOTE = "" ,string I_FECH_CIERRE="", string I_UARIS_MOD = "")
         {
-          
+            string basePath = Path.Combine(AppContext.BaseDirectory, "Recursos");
+            NativeLibrary.Load(Path.Combine(basePath, "icuuc50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icudt50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icuin50.dll"));
 
             var settings = new Dictionary<string, string>
             {

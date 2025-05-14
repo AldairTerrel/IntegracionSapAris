@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.InteropServices;
 
 namespace WSpruebaArisSap.Controllers
 {
@@ -25,8 +26,13 @@ namespace WSpruebaArisSap.Controllers
         }
 
         [HttpGet("ObtenerPedidoVentaController")]
-        public async Task<IActionResult> GetObtenerPedidoVenta(string FEC_CREA_INICIO = "", string FEC_CREA_FIN = "", string NRO_PEDIDO = "",string SOCIEDAD = "")
+        public async Task<IActionResult> GetObtenerPedidoVenta(string FEC_CREA_INICIO= "", string FEC_CREA_FIN = "", string NRO_PEDIDO = "", string SOCIEDAD = "")
         {
+            string basePath = Path.Combine(AppContext.BaseDirectory, "Recursos");
+            NativeLibrary.Load(Path.Combine(basePath, "icuuc50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icudt50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icuin50.dll"));
+
             var settings = new Dictionary<string, string>
             {
                 {"ashost", "10.45.4.163"},
@@ -45,14 +51,20 @@ namespace WSpruebaArisSap.Controllers
                 try
                 {
 
+                    FEC_CREA_INICIO = string.IsNullOrEmpty(FEC_CREA_INICIO) ? "" : FEC_CREA_INICIO;
+                    FEC_CREA_FIN = string.IsNullOrEmpty(FEC_CREA_FIN) ? "" : FEC_CREA_FIN;
                     NRO_PEDIDO = string.IsNullOrEmpty(NRO_PEDIDO) ? "" : NRO_PEDIDO;
+                    SOCIEDAD = string.IsNullOrEmpty(SOCIEDAD) ? "" : SOCIEDAD;
+
+
+
+
 
                     var result = await context.CallFunction("ZSD_PEDIDO_VENTA",
                         Input: f => f
-                                        .SetField("FEC_CREA_INICIO", DateTime.ParseExact(FEC_CREA_INICIO, "dd.MM.yyyy", null))
-                                        .SetField("FEC_CREA_FIN", DateTime.ParseExact(FEC_CREA_FIN, "dd.MM.yyyy", null))
-                                    
-                                        .SetField("NRO_PEDIDO", NRO_PEDIDO)
+                                        .SetField("FEC_CREA_INICIO", DateTime.ParseExact(FEC_CREA_INICIO,"dd.MM.yyyy", null))
+                                        .SetField("FEC_CREA_FIN", DateTime.ParseExact(FEC_CREA_FIN,"dd.MM.yyyy", null))
+                                        .SetField("NRO_PEDIDO", string.IsNullOrWhiteSpace(NRO_PEDIDO) ?"": "00000" + NRO_PEDIDO)//22154  no le ingrso nada
                                         .SetField("SOCIEDAD", SOCIEDAD),
 
 
@@ -69,7 +81,7 @@ namespace WSpruebaArisSap.Controllers
                          from BSTDK in s.GetField<string>("BSTDK")
                          from VDATU in s.GetField<DateTime>("VDATU")
                          from VSBED in s.GetField<string>("VSBED")
-                         from BRGEW in s.GetField<DateTime>("BRGEW")
+                         from BRGEW in s.GetField<string>("BRGEW")
                          from GEWEI in s.GetField<string>("GEWEI")
                          from NTGEW in s.GetField<string>("NTGEW")
                          from AUART in s.GetField<string>("AUART")
@@ -126,6 +138,7 @@ namespace WSpruebaArisSap.Controllers
                              NETWR,
                              WAERK,
                              BSTDK,
+                             VDATU,
                              VSBED,
                              BRGEW,
                              GEWEI,

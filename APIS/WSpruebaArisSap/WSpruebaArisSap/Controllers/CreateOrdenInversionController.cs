@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dbosoft.YaNco.TypeMapping;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.InteropServices;
 
 
 
@@ -29,6 +30,10 @@ namespace WSpruebaArisSap.Controllers
         [HttpGet("CreateOrdenInversionController")]
         public async Task<IActionResult> GetCreateOrdenInversion(string CO_AREA, string COMP_CODE, string ORDER_TYPE,string ORDER, string FUNC_AREA_LONG, string PROFIT_CTR,string REQU_COMP_CODE, string INVEST_PROFILE,string CURRENCY,string OBJECTCLASS="")
         {
+            string basePath = Path.Combine(AppContext.BaseDirectory, "Recursos");
+            NativeLibrary.Load(Path.Combine(basePath, "icuuc50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icudt50.dll"));
+            NativeLibrary.Load(Path.Combine(basePath, "icuin50.dll"));
             var settings = new Dictionary<string, string>
             {
                 {"ashost", "10.45.4.163"},
