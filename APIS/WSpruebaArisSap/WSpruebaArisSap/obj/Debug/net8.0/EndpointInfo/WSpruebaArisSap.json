@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "WSpruebaArisSap",
     "version": "1.0"
@@ -117,21 +117,24 @@
             "name": "MATNR",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "WERKS",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "AUFART",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
@@ -146,49 +149,56 @@
             "name": "START_DATE",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "END_DATE",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "DISPO",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "FEVOR",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "INSMK",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "LGORT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "CHARG",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           }
         ],
@@ -285,44 +295,200 @@
       }
     },
     "/api/NotificacionConsumoaAlimentoOFController": {
-      "get": {
+      "post": {
         "tags": [
           "NotificacionConsumoaAlimentoOF"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotConsOiRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotConsOiRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotConsOiRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NotificacionConsumoProduccionController": {
+      "get": {
+        "tags": [
+          "NotificacionConsumoProduccion"
+        ],
         "parameters": [
+          {
+            "name": "E_TYPE_NOTIF",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MATNR",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "WERKS",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "PLWERK",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "LGORT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "VERID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "CHARG",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
           {
             "name": "BUDAT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "BLDAT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
-            "name": "AUFNR",
+            "name": "REFMG",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "ERFME",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "UARIS_CREA",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "UARIS_MOD",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "matnr",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "werks",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "lgort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "charg",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "bwart",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "entry_qnt",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "entry_uom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           }
         ],
@@ -333,24 +499,26 @@
         }
       }
     },
-    "/api/NotificacionConsumoHuevosOFController": {
+    "/api/NotificacionProduccionHuevosOFController": {
       "get": {
         "tags": [
-          "NotificacionConsumoHuevosOF"
+          "NotificacionProduccionHuevosOF"
         ],
         "parameters": [
           {
             "name": "BUDAT",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "AUFNR",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
@@ -365,14 +533,56 @@
             "name": "UARIS_CREA",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
             "name": "UARIS_MOD",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MATNR",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "WERKS",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "LGORT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "CHARG",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "ENTRY_QNT",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           }
         ],
@@ -383,10 +593,10 @@
         }
       }
     },
-    "/api/ObtenerOrdenesCompraController": {
+    "/api/ObtenerMaterialController": {
       "get": {
         "tags": [
-          "ObtenerOrdenesCompra"
+          "ObtenerMaterial"
         ],
         "parameters": [
           {
@@ -419,6 +629,60 @@
           },
           {
             "name": "NRO_PEDIDO",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ObtenerOrdenesCompraController": {
+      "get": {
+        "tags": [
+          "ObtenerOrdenesCompra"
+        ],
+        "parameters": [
+          {
+            "name": "FEC_CREA_INICIO",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "FEC_CREA_FIN",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "TIPO_DOCU",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "NRO_PEDIDO",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "SOCIEDAD",
             "in": "query",
             "schema": {
               "type": "string",
@@ -501,116 +765,125 @@
       }
     },
     "/api/RegistroMermaAlmacenProdController": {
-      "get": {
+      "post": {
         "tags": [
           "RegistroMermaAlmacenProd"
         ],
-        "parameters": [
-          {
-            "name": "I_MIGO_PED_IMP",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "I_MIGO_MERMAS",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "BUDAT",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "BLDAT",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "EBELN",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "UARIS_CREA",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "UARIS_MOD",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "MATNR",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "WERKS",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "LGORT",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "CHARG",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "ENTRY_QNT",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
-            }
-          },
-          {
-            "name": "COST_CENTER",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": ""
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroMermaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroMermaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroMermaRequest"
+              }
             }
           }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/SapReplicaOdooEntrega": {
+      "post": {
+        "tags": [
+          "SapReplicaOdooEntrega"
         ],
+        "operationId": "SapReplicaOdooEntrega",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooEntrega"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooEntrega"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooEntrega"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/SapReplicaOdooFactura": {
+      "post": {
+        "tags": [
+          "SapReplicaOdooFactura"
+        ],
+        "operationId": "SapReplicaOdooFactura",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooFactura"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooFactura"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooFactura"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/SapReplicaOdooPedido": {
+      "post": {
+        "tags": [
+          "SapReplicaOdooPedido"
+        ],
+        "operationId": "SapReplicaOdooPedido",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooPedido"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooPedido"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplicaOdooPedido"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -787,66 +1060,310 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "WeatherForecast": {
+      "NotConsOiItem": {
         "type": "object",
         "properties": {
-          "date": {
+          "matnr": {
             "type": "string",
-            "format": "date"
+            "nullable": true
           },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
+          "werks": {
+            "type": "string",
+            "nullable": true
           },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
+          "lgort": {
+            "type": "string",
+            "nullable": true
           },
-          "summary": {
+          "charg": {
+            "type": "string",
+            "nullable": true
+          },
+          "entrY_QNT": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotConsOiItems": {
+        "type": "object",
+        "properties": {
+          "matnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "werks": {
+            "type": "string",
+            "nullable": true
+          },
+          "lgort": {
+            "type": "string",
+            "nullable": true
+          },
+          "charg": {
+            "type": "string",
+            "nullable": true
+          },
+          "entrY_QNT": {
+            "type": "string",
+            "nullable": true
+          },
+          "cosT_CENTER": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotConsOiRequest": {
+        "type": "object",
+        "properties": {
+          "budat": {
+            "type": "string",
+            "nullable": true
+          },
+          "bldat": {
+            "type": "string",
+            "nullable": true
+          },
+          "aufnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "uariS_CREA": {
+            "type": "string",
+            "nullable": true
+          },
+          "uariS_MOD": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotConsOiItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroMermaRequest": {
+        "type": "object",
+        "properties": {
+          "i_MIGO_PED_IMP": {
+            "type": "string",
+            "nullable": true
+          },
+          "i_MIGO_MERMAS": {
+            "type": "string",
+            "nullable": true
+          },
+          "budat": {
+            "type": "string",
+            "nullable": true
+          },
+          "bldat": {
+            "type": "string",
+            "nullable": true
+          },
+          "ebeln": {
+            "type": "string",
+            "nullable": true
+          },
+          "uariS_CREA": {
+            "type": "string",
+            "nullable": true
+          },
+          "uariS_MOD": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotConsOiItems"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReplicaOdooEntrega": {
+        "type": "object",
+        "properties": {
+          "vstel": {
+            "type": "string",
+            "nullable": true
+          },
+          "datbi": {
+            "type": "string",
+            "nullable": true
+          },
+          "vbeln": {
+            "type": "string",
+            "nullable": true
+          },
+          "wadaT_IST": {
+            "type": "string",
+            "nullable": true
+          },
+          "replicaOdooEntregaDetalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReplicaOdooEntregaDetalle"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReplicaOdooEntregaDetalle": {
+        "type": "object",
+        "properties": {
+          "posnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "kwmeng": {
+            "type": "string",
+            "nullable": true
+          },
+          "vrkme": {
+            "type": "string",
+            "nullable": true
+          },
+          "charg": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReplicaOdooFactura": {
+        "type": "object",
+        "properties": {
+          "i_ENTREGA": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReplicaOdooPedido": {
+        "type": "object",
+        "properties": {
+          "auart": {
+            "type": "string",
+            "nullable": true
+          },
+          "purcH_NO_C": {
+            "type": "string",
+            "nullable": true
+          },
+          "purcH_DATE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vdatu": {
+            "type": "string",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "vkorg": {
+            "type": "string",
+            "nullable": true
+          },
+          "vtweg": {
+            "type": "string",
+            "nullable": true
+          },
+          "spart": {
+            "type": "string",
+            "nullable": true
+          },
+          "vkgrp": {
+            "type": "string",
+            "nullable": true
+          },
+          "vkbur": {
+            "type": "string",
+            "nullable": true
+          },
+          "zterm": {
+            "type": "string",
+            "nullable": true
+          },
+          "augru": {
+            "type": "string",
+            "nullable": true
+          },
+          "bzirk": {
+            "type": "string",
+            "nullable": true
+          },
+          "kunnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "replicaOdooPedidoDetalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReplicaOdooPedidoDetalle"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReplicaOdooPedidoDetalle": {
+        "type": "object",
+        "properties": {
+          "posnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "matnr": {
+            "type": "string",
+            "nullable": true
+          },
+          "werks": {
+            "type": "string",
+            "nullable": true
+          },
+          "dzmeng": {
+            "type": "number",
+            "format": "double"
+          },
+          "dzieme": {
+            "type": "string",
+            "nullable": true
+          },
+          "pstyv": {
+            "type": "string",
+            "nullable": true
+          },
+          "netwr": {
+            "type": "number",
+            "format": "double"
+          },
+          "waerk": {
+            "type": "string",
+            "nullable": true
+          },
+          "profiT_CTR": {
+            "type": "string",
+            "nullable": true
+          },
+          "lgort": {
             "type": "string",
             "nullable": true
           }

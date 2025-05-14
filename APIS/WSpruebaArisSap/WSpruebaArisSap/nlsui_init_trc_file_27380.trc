@@ -1,7 +1,0 @@
-Could not open the ICU common library.
-   The following files must be in the path described by
-   the environment variable "PATH":
-   icuuc50.dll, icudt50.dll, icuin50.dll [D:/depot/bas/753_REL/src/flat/nlsui0.c 662] pid = 27380
-PATH is currently set to C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Amazon\SessionManagerPlugin\bin\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\aldair.terrel\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Amazon\SessionManagerPlugin\bin\;C:\Users\aldair.terrel\AppData\Local\GitHubDesktop\bin;C:\Users\aldair.terrel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aldair.terrel\.dotnet\tools;C:\Users\aldair.terrel\AppData\Roaming\npm;  [D:/depot/bas/753_REL/src/flat/nlsui0.c 662] pid = 27380
-Set the environment variable NLSUI_INIT_TRACE_LEVEL to 'high' to see more details. [D:/depot/bas/753_REL/src/flat/nlsui0.c 662] pid = 27380
-Check also SAP note 519753. [D:/depot/bas/753_REL/src/flat/nlsui0.c 662] pid = 27380
