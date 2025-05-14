@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WSpruebaArisSap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57587821b482a2c36de8bce32a53663485e867fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8ecf4056113836a5489030dc1e6ae5ad83bb6e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("WSpruebaArisSap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WSpruebaArisSap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

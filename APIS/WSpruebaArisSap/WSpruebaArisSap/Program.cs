@@ -7,9 +7,6 @@ using Infrastructure.Services;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-<<<<<<< Updated upstream
-// Add services to the container.
-=======
 
 builder.Services.Configure<SapSettings>(
     builder.Configuration.GetSection("SapSettings"));
@@ -28,20 +25,11 @@ builder.Services.AddTransient<SapResultadoPedido>();
 builder.Services.AddTransient<SapResultadoEntrega>();
 builder.Services.AddTransient<SapResultadoFactura>();
 
->>>>>>> Stashed changes
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-<<<<<<< Updated upstream
-var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
-=======
 
 var app = builder.Build();
 
@@ -55,4 +43,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
->>>>>>> Stashed changes
+
+

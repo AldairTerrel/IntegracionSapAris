@@ -90,7 +90,7 @@
       },
       {
         "Name": "GAMNG",
-        "Type": "System.Decimal",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -194,12 +194,63 @@
   },
   {
     "ContainingType": "WSpruebaArisSap.Controllers.NotificacionConsumoaAlimentoOFController",
-    "Method": "GetCreateOrdenInversion",
+    "Method": "CreateOrdenInversion",
     "RelativePath": "api/NotificacionConsumoaAlimentoOFController",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WSpruebaArisSap.Controllers.NotificacionConsumoaAlimentoOFController\u002BNotConsOiRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.NotificacionConsumoProduccionController",
+    "Method": "GetNotificacionConsumoProduccion",
+    "RelativePath": "api/NotificacionConsumoProduccionController",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "E_TYPE_NOTIF",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MATNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WERKS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PLWERK",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LGORT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VERID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CHARG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "BUDAT",
         "Type": "System.String",
@@ -211,7 +262,12 @@
         "IsRequired": false
       },
       {
-        "Name": "AUFNR",
+        "Name": "REFMG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ERFME",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -224,14 +280,49 @@
         "Name": "UARIS_MOD",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "matnr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "werks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lgort",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "charg",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bwart",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "entry_qnt",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "entry_uom",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WSpruebaArisSap.Controllers.NotificacionConsumoHuevosOFController",
-    "Method": "GetCreateOrdenInversion",
-    "RelativePath": "api/NotificacionConsumoHuevosOFController",
+    "ContainingType": "WSpruebaArisSap.Controllers.NotificacionProduccionHuevosOFController",
+    "Method": "GetNotificacionProduccionHuevosOF",
+    "RelativePath": "api/NotificacionProduccionHuevosOFController",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -248,7 +339,7 @@
       },
       {
         "Name": "YIELD",
-        "Type": "System.Decimal",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -258,6 +349,67 @@
       },
       {
         "Name": "UARIS_MOD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MATNR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WERKS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LGORT",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CHARG",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ENTRY_QNT",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.ObtenerMaterialController",
+    "Method": "GetObtenerMaterial",
+    "RelativePath": "api/ObtenerMaterialController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FEC_CREA_INICIO",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FEC_CREA_FIN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TIPO_DOCU",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SOCIEDAD",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NRO_PEDIDO",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -288,12 +440,12 @@
         "IsRequired": false
       },
       {
-        "Name": "SOCIEDAD",
+        "Name": "NRO_PEDIDO",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "NRO_PEDIDO",
+        "Name": "SOCIEDAD",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -349,76 +501,16 @@
   },
   {
     "ContainingType": "WSpruebaArisSap.Controllers.RegistroMermaAlmacenProdController",
-    "Method": "GetRegistroMermaAlmacenProd",
+    "Method": "CreateRegistroMermaAlmacenProd",
     "RelativePath": "api/RegistroMermaAlmacenProdController",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "I_MIGO_PED_IMP",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "I_MIGO_MERMAS",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "BUDAT",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "BLDAT",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "EBELN",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UARIS_CREA",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UARIS_MOD",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "MATNR",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "WERKS",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "LGORT",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CHARG",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ENTRY_QNT",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "COST_CENTER",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "WSpruebaArisSap.Controllers.RegistroMermaAlmacenProdController\u002BRegistroMermaRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -536,24 +628,54 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WSpruebaArisSap.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "WSpruebaArisSap.Controllers.SapReplicaOdooEntregaController",
+    "Method": "ReplicaOdooPedido",
+    "RelativePath": "SapReplicaOdooEntrega",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WSpruebaArisSap.WeatherForecast, WSpruebaArisSap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "replicaOdooEntrega",
+        "Type": "Domain.Entidad.ReplicaOdooEntrega",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": [],
+    "EndpointName": "SapReplicaOdooEntrega"
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.SapReplicaOdooFacturaController",
+    "Method": "ReplicaOdooPedido",
+    "RelativePath": "SapReplicaOdooFactura",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "replicaOdooFactura",
+        "Type": "Domain.Entidad.ReplicaOdooFactura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "SapReplicaOdooFactura"
+  },
+  {
+    "ContainingType": "WSpruebaArisSap.Controllers.SapReplicaOdooPedidoController",
+    "Method": "ReplicaOdooPedido",
+    "RelativePath": "SapReplicaOdooPedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "replicaOdooPedido",
+        "Type": "Dominio.Entidad.ReplicaOdooPedido",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "SapReplicaOdooPedido"
   }
 ]
